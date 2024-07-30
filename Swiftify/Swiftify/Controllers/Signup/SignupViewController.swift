@@ -24,10 +24,11 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         
         // Title Label setup
         titleLabel.text = "Sign Up"
+        titleLabel.textColor = .systemPurple
         titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(titleLabel)
@@ -35,17 +36,35 @@ class SignUpViewController: UIViewController {
         // Email Text Field Setup
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
         emailTextField.placeholder = "Email"
-        emailTextField.borderStyle = .roundedRect
+        emailTextField.borderStyle = .none
         emailTextField.keyboardType = .emailAddress
         emailTextField.autocapitalizationType = .none
+        emailTextField.layer.cornerRadius = 25
         emailTextField.autocorrectionType = .no
+        emailTextField.backgroundColor = .white
+        emailTextField.layer.masksToBounds = true
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.borderColor = UIColor.gray.cgColor
+        // Add padding to the left
+                let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: emailTextField.frame.height))
+                emailTextField.leftView = paddingView
+                emailTextField.leftViewMode = .always
         view.addSubview(emailTextField)
         
         // Password Text Field Setup
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.placeholder = "Password"
-        passwordTextField.borderStyle = .roundedRect
+        passwordTextField.borderStyle = .none
+        passwordTextField.layer.cornerRadius = 25
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.backgroundColor = .white
+        passwordTextField.layer.masksToBounds = true
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.borderColor = UIColor.gray.cgColor
+        // Add padding to the left
+                let paddingView2 = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: passwordTextField.frame.height))
+                passwordTextField.leftView = paddingView2
+                passwordTextField.leftViewMode = .always
         view.addSubview(passwordTextField)
         
         // Sign Up Button Setup
@@ -53,7 +72,7 @@ class SignUpViewController: UIViewController {
         signUpButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         signUpButton.backgroundColor = .systemPurple
         signUpButton.setTitleColor(.white, for: .normal)
-        signUpButton.layer.cornerRadius = 5
+        signUpButton.layer.cornerRadius = 20
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         view.addSubview(signUpButton)
@@ -61,6 +80,7 @@ class SignUpViewController: UIViewController {
         // No Account Label Setup
         noAccountLabel.translatesAutoresizingMaskIntoConstraints = false
         noAccountLabel.text = "Don't have an account?"
+        noAccountLabel.textColor = .white
         noAccountLabel.font = UIFont.systemFont(ofSize: 16)
         noAccountLabel.textAlignment = .center
         view.addSubview(noAccountLabel)
@@ -68,7 +88,7 @@ class SignUpViewController: UIViewController {
         // Sign In Button Setup
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.setTitle("Sign In", for: .normal)
-        signInButton.setTitleColor(.systemBlue, for: .normal)
+        signInButton.setTitleColor(.systemPurple, for: .normal)
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         view.addSubview(signInButton)
     }
@@ -91,7 +111,7 @@ class SignUpViewController: UIViewController {
             passwordTextField.heightAnchor.constraint(equalToConstant: 44),
             
             // Sign Up Button Constraints
-            signUpButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
+            signUpButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
             signUpButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             signUpButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             signUpButton.widthAnchor.constraint(equalToConstant: 100),

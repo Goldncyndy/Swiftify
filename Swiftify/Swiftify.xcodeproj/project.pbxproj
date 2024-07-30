@@ -11,7 +11,6 @@
 		CEABA0942C590DF0009B7C8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA0932C590DF0009B7C8A /* SceneDelegate.swift */; };
 		CEABA0962C590DF0009B7C8A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA0952C590DF0009B7C8A /* OnboardingViewController.swift */; };
 		CEABA0992C590DF0009B7C8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABA0972C590DF0009B7C8A /* Main.storyboard */; };
-		CEABA09C2C590DF0009B7C8A /* Swiftify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEABA09A2C590DF0009B7C8A /* Swiftify.xcdatamodeld */; };
 		CEABA09E2C590DF2009B7C8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEABA09D2C590DF2009B7C8A /* Assets.xcassets */; };
 		CEABA0A12C590DF2009B7C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEABA09F2C590DF2009B7C8A /* LaunchScreen.storyboard */; };
 		CEABA0AC2C590DF3009B7C8A /* SwiftifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA0AB2C590DF3009B7C8A /* SwiftifyTests.swift */; };
@@ -45,7 +44,6 @@
 		CEABA0932C590DF0009B7C8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEABA0952C590DF0009B7C8A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CEABA0982C590DF0009B7C8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CEABA09B2C590DF0009B7C8A /* Swiftify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swiftify.xcdatamodel; sourceTree = "<group>"; };
 		CEABA09D2C590DF2009B7C8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEABA0A02C590DF2009B7C8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEABA0A22C590DF2009B7C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				CEABA0C42C590F70009B7C8A /* Resources */,
 				CEABA0972C590DF0009B7C8A /* Main.storyboard */,
 				CEABA09F2C590DF2009B7C8A /* LaunchScreen.storyboard */,
-				CEABA09A2C590DF0009B7C8A /* Swiftify.xcdatamodeld */,
 			);
 			path = Swiftify;
 			sourceTree = "<group>";
@@ -371,7 +368,6 @@
 				CEABA0D32C59126D009B7C8A /* SigninViewController.swift in Sources */,
 				CEABA0D52C5912C9009B7C8A /* ChatViewController.swift in Sources */,
 				CEABA0D12C591244009B7C8A /* SignupViewController.swift in Sources */,
-				CEABA09C2C590DF0009B7C8A /* Swiftify.xcdatamodeld in Sources */,
 				CEABA0942C590DF0009B7C8A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,19 +711,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CEABA09A2C590DF0009B7C8A /* Swiftify.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CEABA09B2C590DF0009B7C8A /* Swiftify.xcdatamodel */,
-			);
-			currentVersion = CEABA09B2C590DF0009B7C8A /* Swiftify.xcdatamodel */;
-			path = Swiftify.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CEABA0862C590DF0009B7C8A /* Project object */;
 }

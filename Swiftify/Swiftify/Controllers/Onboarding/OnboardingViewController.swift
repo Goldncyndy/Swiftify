@@ -28,7 +28,7 @@ class OnboardingViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.image = UIImage(named: "diary1")
+        imageView.image = UIImage(named: "bot3")
         view.addSubview(imageView)
 
         // Dark Overlay View Setup
@@ -38,15 +38,15 @@ class OnboardingViewController: UIViewController {
         
         // Page Title Label Setup
         pageTitleLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)
-        pageTitleLabel.textColor = .systemPink
+        pageTitleLabel.textColor = .systemPurple
         pageTitleLabel.textAlignment = .center
-        pageTitleLabel.text = "PERSONAL DIARY"
+        pageTitleLabel.text = "SwiftIfy"
         pageTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pageTitleLabel)
 
         // Title Label Setup
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "This is my Personal Diary"
+        titleLabel.text = "Ask AI anything and get instant and well organised answers"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
         titleLabel.textAlignment = .center
         titleLabel.textColor = .white
@@ -55,7 +55,7 @@ class OnboardingViewController: UIViewController {
 
         // Description Label Setup
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.text = "Keep Off"
+        descriptionLabel.text = "Don't be shy"
         descriptionLabel.font = UIFont.systemFont(ofSize: 16)
         descriptionLabel.textAlignment = .center
         descriptionLabel.textColor = .white
@@ -73,7 +73,7 @@ class OnboardingViewController: UIViewController {
         NSLayoutConstraint.activate([
             
             // Skip Button Constraints
-            skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
+            skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 2),
             skipButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
             // Image View Constraints
@@ -90,15 +90,15 @@ class OnboardingViewController: UIViewController {
             darkOverlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             darkOverlayView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             darkOverlayView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            darkOverlayView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3),
+            darkOverlayView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4),
 
             // Title Label Constraints
-            titleLabel.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor, constant: -10),
+            titleLabel.topAnchor.constraint(equalTo: darkOverlayView.topAnchor, constant: 50),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
             // Description Label Constraints
-            descriptionLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -70),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
@@ -108,13 +108,14 @@ class OnboardingViewController: UIViewController {
     
     
     @objc func skipButtonTapped() {
-        let eventVC = SignUpViewController()
-        navigationController?.pushViewController(eventVC, animated: true)
+        
+        let signinVC = SignInViewController()
+        navigationController?.pushViewController(signinVC, animated: true)
         
         UserDefaults.standard.set(true, forKey: "hasCompletedOnboarding")
                
-        let navigationController = UINavigationController(rootViewController: eventVC)
-        UIApplication.shared.windows.first?.rootViewController = navigationController
+//        let navigationController = UINavigationController(rootViewController: signupVC)
+//        UIApplication.shared.windows.first?.rootViewController = navigationController
           
     }
 }
