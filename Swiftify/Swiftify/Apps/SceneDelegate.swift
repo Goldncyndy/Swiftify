@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let onboardingVC = OnboardingViewController()
+        let onboardingVC = ChatViewController()
         let navigationController = UINavigationController(rootViewController: onboardingVC)
         
         window?.rootViewController = navigationController

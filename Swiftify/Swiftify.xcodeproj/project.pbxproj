@@ -19,6 +19,7 @@
 		CEABA0D12C591244009B7C8A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA0D02C591244009B7C8A /* SignupViewController.swift */; };
 		CEABA0D32C59126D009B7C8A /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA0D22C59126D009B7C8A /* SigninViewController.swift */; };
 		CEABA0D52C5912C9009B7C8A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA0D42C5912C9009B7C8A /* ChatViewController.swift */; };
+		CEABA0D72C59B2F8009B7C8A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA0D62C59B2F8009B7C8A /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CEABA0D02C591244009B7C8A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CEABA0D22C59126D009B7C8A /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		CEABA0D42C5912C9009B7C8A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CEABA0D62C59B2F8009B7C8A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		CEABA0C62C590F9F009B7C8A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CEABA0D62C59B2F8009B7C8A /* UIColor+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEABA0D72C59B2F8009B7C8A /* UIColor+Extension.swift in Sources */,
 				CEABA0962C590DF0009B7C8A /* OnboardingViewController.swift in Sources */,
 				CEABA0922C590DF0009B7C8A /* AppDelegate.swift in Sources */,
 				CEABA0D32C59126D009B7C8A /* SigninViewController.swift in Sources */,
